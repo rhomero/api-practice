@@ -6,7 +6,7 @@ async function getGif(e) {
     if(display){$('#alert').addClass('d-none');}
     try{
     let searchTerm = $('#term').val();
-    const gifs = await axios.get("http://api.giphy.com/v1/gifs/search", {params:{q:searchTerm, api_key:"MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"}});
+    const gifs = await axios.get("https://api.giphy.com/v1/gifs/search", {params:{q:searchTerm, api_key:"MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym"}});
     let number = Math.floor(Math.random() * gifs.data.data.length)
     let url = gifs.data.data[number].images.original.url;
     
